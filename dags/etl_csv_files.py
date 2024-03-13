@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from airflow import DAG
 from airflow.decorators import task
 from airflow.operators.empty import EmptyOperator
-
+from airflow.models import Variable
 
 with DAG(
     'etl_csv_files',
@@ -60,11 +60,11 @@ with DAG(
     
     @task()
     def insert_to_db(**kwargs):
-        host = 'ep-gentle-wind-a12yboxc.ap-southeast-1.aws.neon.tech'
-        port = 5432
-        database = 'bootcamp'
-        username = 'thoni.shohibus'
-        password = 'dr5isAQ1GMfP'
+        host = Variable.get('host_postgres_db')
+        port = Variable.get('port_postgres_db')
+        database = Variable.get('dbname_postgres_db')
+        username = Variable.get('user_postgres_db')
+        password = Variable.get('pass_postgres_db')
 
         conn_string = f'postgresql://{username}:{password}@{host}:{port}/{database}'
         conn = create_engine(conn_string)
