@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: dim_user
+    description: "All unique user that partna has"
+    columns:
+      - name: customer_id
+        description: "The primary key for this table, pointing uniquely to each user."
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "name of user"
+      
+  - name: dim_product
+    description: "All information about products"
+    columns:
+      - name: product_id
+        description: "The primary key for this table, pointing uniquely to each product."
+        tests:
+          - unique
+          - not_null
+      - name: category
+        description: "Category of product"
+        tests:
+          - not_null
+      - name: price
+        description: "price of product"
+        tests:
+          - not_null
+      - name: ratings
+        description: "ratings of product"
+        tests:
+          - not_null
+
+  - name: fact_purchase
+    description: "all transaction data"
+    columns:
+      - name: product_id
+        description: ""
+        tests:
+          - not_null
+      - name: customer_id
+        description: ""
+        tests:
+          - not_null
+      - name: purchase_date
+        description: ""
+        tests:
+          - not_null
+      - name: quantity
+        description: ""
+        tests:
+          - not_null

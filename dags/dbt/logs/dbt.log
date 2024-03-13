@@ -1,0 +1,44 @@
+[0m21:33:09.314076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10536c6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11847baf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11847ba30>]}
+
+
+============================== 21:33:09.316867 | 97353ad3-9c2b-4484-a0e3-2122158896cc ==============================
+[0m21:33:09.316867 [info ] [MainThread]: Running with dbt=1.7.9
+[0m21:33:09.317229 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/pintu/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:35:08.382946 [debug] [MainThread]: Starter project path: /Users/pintu/Documents/partna-airflow/dags/dbt/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m21:35:08.394780 [info ] [MainThread]: 
+Your new dbt project "partna_warehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:35:08.395294 [info ] [MainThread]: Setting up your profile.
+[0m21:36:29.115871 [info ] [MainThread]: Profile partna_warehouse written to /Users/pintu/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:36:29.131600 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 199.87074, "process_user_time": 1.108538, "process_kernel_time": 0.140898, "process_mem_max_rss": "98025472", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:36:29.132697 [debug] [MainThread]: Command `dbt init` succeeded at 21:36:29.132452 after 199.87 seconds
+[0m21:36:29.133253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10536c6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11847bf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11847bb80>]}
+[0m21:36:29.133825 [debug] [MainThread]: Flushing usage events
+[0m21:41:13.393415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cfa2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112403580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112400070>]}
+
+
+============================== 21:41:13.396626 | a0a39fba-4c91-4cd6-abeb-bdb814ea90c1 ==============================
+[0m21:41:13.396626 [info ] [MainThread]: Running with dbt=1.7.9
+[0m21:41:13.396988 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/pintu/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:41:13.397369 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/pintu/Documents/partna-airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m21:41:13.398840 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 0.042152125, "process_user_time": 1.040502, "process_kernel_time": 0.129975, "process_mem_max_rss": "94584832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:41:13.399246 [debug] [MainThread]: Command `dbt compile` failed at 21:41:13.399159 after 0.04 seconds
+[0m21:41:13.399486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cfa2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112400070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112467850>]}
+[0m21:41:13.399709 [debug] [MainThread]: Flushing usage events

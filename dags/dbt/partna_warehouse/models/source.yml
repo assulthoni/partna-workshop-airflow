@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: partna_transactions
+    database: bootcamp  
+    schema: public  
+    tables:
+      - name: transaction_data_wide_table

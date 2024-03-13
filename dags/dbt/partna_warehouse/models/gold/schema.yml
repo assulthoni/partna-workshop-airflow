@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: revenue_by_day
+    description: "Revenue by day in sum"
+    columns:
+      - name: date
+        description: "date"
+        tests:
+          - unique
+          - not_null
+      - name: revenue
+        description: "revenue each day"
+        tests:
+          - not_null
+      - name: lag_revenue
+        description: "lagging revenue by one day"
+        tests:
+          - not_null
