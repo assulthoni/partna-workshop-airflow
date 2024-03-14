@@ -71,7 +71,10 @@ for node in data["nodes"].keys():
 for node in data["nodes"].keys():
     if node.split(".")[0] == "model":
         node_test = node.replace("model", "test")
+        # untuk mendefinisikan relation antara run dan test
         dbt_compile >> dbt_tasks[node] >> dbt_tasks[node_test]
+
+        # untuk mendefinisikan relation antar model
         for upstream_node in data["nodes"][node]["depends_on"]["nodes"]:
             upstream_node_type = upstream_node.split(".")[0]
             if upstream_node_type == "model":
