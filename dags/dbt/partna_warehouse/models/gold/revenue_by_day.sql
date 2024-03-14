@@ -1,9 +1,8 @@
 {{
     config(
         materialized='view',
-        view, table, mat+view, incremental
         schema='finance',
-        tags=['schedule:7d']
+        tags=['schedule:1w', 'journaling']
     )
 }}
 

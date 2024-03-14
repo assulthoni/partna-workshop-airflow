@@ -17,13 +17,13 @@ dag = DAG(
 task_run = BashOperator(
     dag=dag,
     task_id="dbt_run",
-    bash_command=f"cd {DBT_DIR} && dbt run --profiles-dir ."
+    bash_command=f"cd {DBT_DIR} && dbt run --profiles-dir . --select tag:schedule:1d"
 )
 
 task_test = BashOperator(
     dag=dag,
     task_id="dbt_test",
-    bash_command=f"cd {DBT_DIR} && dbt run --profiles-dir ."
+    bash_command=f"cd {DBT_DIR} && dbt test --profiles-dir . --select tag:schedule:1d"
 )
 
 task_run >> task_test

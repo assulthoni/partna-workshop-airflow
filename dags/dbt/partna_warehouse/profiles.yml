@@ -1,0 +1,12 @@
+partna_warehouse:
+  outputs:
+    dev:
+      dbname: bootcamp
+      host: ep-gentle-wind-a12yboxc.ap-southeast-1.aws.neon.tech
+      pass: dr5isAQ1GMfP
+      port: 5432
+      schema: public
+      threads: 2
+      type: postgres
+      user: thoni.shohibus
+  target: dev

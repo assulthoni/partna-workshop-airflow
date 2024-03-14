@@ -1,0 +1,11 @@
+schedulers:
+  - name: schedule_1w
+    type: schedule
+    description: Run all models that need to be run weekly
+    interval: '0 1 * * 1'
+    selector: tag:schedule:1w
+  - name: schedule_1d
+    type: schedule
+    description: Run all models that need to be run weekly
+    interval: '@daily'
+    selector: tag:schedule:1d
